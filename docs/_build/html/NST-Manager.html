@@ -1,0 +1,1618 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>NST Manager App &#8212; nst-manager-docs 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><strong>NST Manager (Formerly: Nest Manager)</strong></p>
+<div class="section" id="nst-manager-app">
+<h1>NST Manager App<a class="headerlink" href="#nst-manager-app" title="Permalink to this headline">¶</a></h1>
+<p>This SmartThings SmartApp is the core of the Nest integration with
+SmartThings. The SmartApp and Device Handlers work together to provide
+integration to the SmartThings ecosystem using Nest’s Official API. This
+also includes automations that allow enabling different features. See
+<a href="#id9"><span class="problematic" id="id10">`NST Automations Info`__</span></a></p>
+<div class="section" id="features-coming-soon">
+<h2>Features (Coming Soon)<a class="headerlink" href="#features-coming-soon" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="screen-shots">
+<h2>Screen Shots<a class="headerlink" href="#screen-shots" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="section" id="nst-automations-app">
+<h1>NST Automations App<a class="headerlink" href="#nst-automations-app" title="Permalink to this headline">¶</a></h1>
+<p><strong>The Available Automations:</strong></p>
+<ul class="simple">
+<li><em>Nest Mode (Home/Away) (built-in, user can choose to enable)</em></li>
+<li><em>Thermostat Automations (built-in, user can choose to enable)</em></li>
+<li><em>Watchdog Automation (built-in, always enabled)</em></li>
+</ul>
+<p>There are many Automations built-in to NST Manager. This makes setup and
+operations much simpler as the automations are integrated both into NST
+Manager, and with each other.</p>
+<ul class="simple">
+<li><em>Note</em>: Multiple SmartApps simultaneously use NST Manager device
+handlers, as the devices handlers comply with SmartThings Device
+Capabilities.</li>
+<li><strong>Heads Up</strong>: It is important to consider “who is on first” in
+regards to setting up automations. This includes schedules and
+automations built into Nest itself, as well as SmartThings
+automations.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="nest-mode-home-away-automation">
+<h2>Nest Mode (Home/Away Automation)<a class="headerlink" href="#nest-mode-home-away-automation" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><a href="#id1"><span class="problematic" id="id2">**</span></a>Automate changes to the Nest location’s Home</div></blockquote>
+<p>/ Away setting**</p>
+<p>Nest Home/Away can be updated using one of the following:</p>
+<ul class="simple">
+<li>Based on SmartThings Location Mode(s)</li>
+<li>One or more SmartThings Presence Sensors</li>
+<li>SmartThings Switch Device(s)</li>
+</ul>
+<p>Typically with this automation, configure its options to have it set
+thermostats to ECO settings when AWAY, and return to normal operations
+when HOME.</p>
+<p>Time, ST mode, or HVAC state restrictions can be set to restrict
+operations.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">For information on SmartThings Location Modes, some references to
+learn about creating, and managing are:</div>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://community.smartthings.com/t/jds-welcome-faq/65163">Welcome FAQ [SmartThings Community
+Page</a>]</li>
+<li><a class="reference external" href="https://community.smartthings.com/t/faq-how-to-add-a-new-mode-or-manually-change-from-one-mode-to-another/15530">How to Add a new Mode [SmartThings Community
+Page</a>]</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">See Nest Home/Away Assist in the Nest Mobile App, or in the Nest Web
+interface <a class="reference external" href="https://home.nest.com">https://home.nest.com</a>)</div>
+</div>
+<p><strong>*FYI: Only one instance of a Nest Home/Away automation is allowed per
+SmartThings location*</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="watchdog-automation">
+<h2>WatchDog Automation<a class="headerlink" href="#watchdog-automation" title="Permalink to this headline">¶</a></h2>
+<p><strong>Monitors configured Nest devices and NST
+Manager for errors (This is automatically installed and configured)</strong></p>
+<ul class="simple">
+<li>The sole function of this automation is send notifications when
+errors or safety settings are reached.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="thermostat-automations">
+<h2>Thermostat Automations<a class="headerlink" href="#thermostat-automations" title="Permalink to this headline">¶</a></h2>
+<p><a href="#id5"><span class="problematic" id="id6">|nm\_tstat\_automation\_icon.png|</span></a> <strong>Allows automation centered around
+that particular thermostat with many available features</strong></p>
+<p>This automation has many features that can be individually enabled: (Fan
+Control, External Temp, Humidifier Control, Schedules, Remote Sensor,
+Contact Watcher, Leak Watcher). If schedules are setup/enabled (Schedule
+Automation below), all features that are enabled for this Nest
+Thermostat share the schedule set points.</p>
+<p><strong>*When Nest location is set to AWAY, and thermostats are set to ECO,
+temperature settings cannot be adjusted by SmartThings automations. It
+is important that ECO temperature settings are properly setup in each
+configured Nest thermostat.*</strong></p>
+<p><strong>*NOTICE: Nest thermostats have built-in safety temperatures. These
+should be properly set on each thermostats to ensure full protection.*</strong></p>
+<p><strong>NOTICE: There can be one Thermostat Automation per Nest Thermostat
+(logically a Zone within the home)</strong> Many builtin features may be
+enabled within the Thermostat Automation:</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="schedules">
+<h3>Schedules<a class="headerlink" href="#schedules" title="Permalink to this headline">¶</a></h3>
+<p><strong>Automate temperature set points and/or HVAC mode
+settings based on restrictions by time, ST Modes, motion sensors being
+active</strong></p>
+<p>Schedules are not required to be enabled, if enabled the following rules
+should be followed:</p>
+<p><em>NOTE: Currently there can be up to 8 schedules enabled per thermostat
+automation. All automations enabled within a thermostat Automation share
+the schedules. (Developer can adjust this number remotely as time goes
+on)</em></p>
+<ul class="simple">
+<li>The schedule precedence is the first schedule that is not restricted
+(i.e. the schedules are evaluated in order 1,2,3,4) and the first
+schedule whose restrictions match current state is set as the
+*active* schedule.</li>
+<li>For a Schedule to become active, it <strong>MUST</strong> always have Temperature
+set-points configured.<ul>
+<li>(Optionally) it can have:<ul>
+<li>HVAC mode to set when schedule is active</li>
+<li>Restrictions for when schedule can be considered ACTIVE<ul>
+<li>SmartThings Location Modes</li>
+<li>Time of Day</li>
+<li>Days of week</li>
+<li>Switch is required to be <em>ON</em> to make schedule Active.</li>
+<li>Switch that makes schedule Inactive</li>
+</ul>
+</li>
+<li>Remote sensors to use when schedule is active (<em>NOTE: Only if
+the Remote Sensor automation is enabled/configured</em>)</li>
+<li>Motion Sensor to use to override schedule settings to motion
+settings<ul>
+<li>Motion override settings include HVAC Mode, Temperature
+set-points.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">A Simple Schedule Example:</div>
+</div>
+<ul class="simple">
+<li>Schedule 1 | Heat setpoint: 72� | SmartThings Location Mode(s):
+DAYTIME</li>
+<li>Schedule 2 | Heat setpoint: 68� | SmartThings Location Mode(s):
+NIGHTTIME</li>
+<li>Schedule 3 | Heat Setpoint 65�</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">The above assumes ST Location Modes DAYTIME, NIGHTTIME (There may be
+more modes defined), and adjusts the thermostat setpoints when the ST
+Mode changes to one of these modes (schedule 1, schedule 2). Some
+Notes:</div>
+</div>
+<ul class="simple">
+<li>Because the schedules did not fill in HVAC Modes, We will use the
+current HVAC Mode that the thermostat is in at the time the
+automation runs. HVAC mode can be defined in a schedule (for example
+one of HEAT, COOL, or AUTO) to have the automation set that HVAC mode
+then set the temperature setpoints.</li>
+<li>If the thermostat is OFF when the schedule is evaluated (schedule
+without HVAC mode set in schedule), the HVAC system will stay OFF as
+in the example above the schedules are not configured to change HVAC
+mode. The schedule “will be active”, but it will not adjust setpoints
+as the current HVAC mode (OFF) does not allow temp changes.</li>
+<li>If the HVAC mode is ECO when the schedule is evaluated (or the
+schedule sets the HVAC mode to ECO), the temperature settings of the
+schedule are “ignored”, as a Nest thermostat in HVAC mode ECO (like
+OFF), adjustments to the temperature settings cannot be made. If the
+thermostat comes out of ECO mode (for example Nest Mode automation
+above or some other automation or user operation), the schedule would
+be re-evaluated and the temperature settings will take effect.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">In the example above Schedule 3 is the <em>“catch-all”</em> schedule, if none
+of the other schedules matched. So if the ST Mode went from DAYTIME -&gt;
+VACATION, or NIGHTTIME -&gt; VACATION, the first two schedules would not
+match. Having a catchall without any time/mode restrictions LAST makes
+it clear that some schedule matches.</div>
+</div>
+<ul class="simple">
+<li><strong>NOTICE</strong>: If schedule 3 was first in the list, it would ALWAYS
+match, and the schedule would set the zone to 65 degrees when the
+automation runs. <strong>*SCHEDULE ORDER MATTERS!*</strong></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">For more information on SmartThings Location Modes, here are some
+references to learn about creating and managing them:</div>
+</div>
+<ul class="simple">
+<li><a class="reference external" href="https://community.smartthings.com/t/jds-welcome-faq/65163">Welcome FAQ [SmartThings Community
+Page</a>]</li>
+<li><a class="reference external" href="https://community.smartthings.com/t/faq-how-to-add-a-new-mode-or-manually-change-from-one-mode-to-another/15530">How to Add a new Mode [SmartThings Community
+Page</a>]</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><strong>*NOTE:*</strong> The more advanced schedules will have more parameters
+and/or overrides. Additional settings include motion sensors and
+temperature settings to use if the schedule is active when motion is
+detected. When using Remote Sensor automation (below), there are
+settings to allow adjusting which temperature sensors are used when a
+schedule is active, etc. It is not required to fill in these
+additional parameters unless the automation “plan/desires” requires
+them. The same basic rules apply - first schedule that matches the
+schedule restrictions is the active schedule.</div>
+</div>
+</div>
+<div class="section" id="fan-automations">
+<h3>Fan Automations<a class="headerlink" href="#fan-automations" title="Permalink to this headline">¶</a></h3>
+<p><strong>Automates Fan Operations</strong></p>
+<p>There are two automations in the Fan Automation:</p>
+<ul class="simple">
+<li>Operate an external Fan while the HVAC system is operating<ul>
+<li>This automation turns on/off an external fan while the HVAC system
+is operating. This automation can be configured to track certain
+HVAC modes (heat, cool) or track hvac system fan (if HVAC system
+fan is present)</li>
+</ul>
+</li>
+<li>Circulate air using the HVAC Fan while the HVAC system is idle<ul>
+<li>This automation cycles the HVAC system fan on/off at intervals
+while the HVAC system is idle</li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line">Time, ST mode, or HVAC state restrictions can be set to restrict
+operations.</div>
+</div>
+</div>
+<div class="section" id="remote-sensor">
+<h3>Remote Sensor<a class="headerlink" href="#remote-sensor" title="Permalink to this headline">¶</a></h3>
+<p><strong>Use additional/alternate temperature sensors
+for determining a zone’s temperature in place of thermostat</strong></p>
+<div class="line-block">
+<div class="line">Remote Sensors are commonly used to deal with temperature differences
+within a thermostat zone that may cause occupants to feel
+uncomfortable. By adding or using different temperature readings
+within the zone, this automation can change HVAC operation to make the
+zone more comfortable. This automation also allows creation larger
+“zones” by joining together different zones.</div>
+<div class="line">Creating a virtual thermostat for the remote sensor automation, makes
+it easier to see and adjust the zone’s temperatures via the
+SmartThings mobile application or other SmartApps.</div>
+<div class="line">* If multiple sensors are in use, they are averaged together to
+determine the new zone temperature</div>
+</div>
+<ul class="simple">
+<li>Automation schedules can override alternate temperature sensors used
+by Remote Sensor automation to allow for different temperature
+measurements based on schedule.<ul>
+<li>Example:<ul>
+<li>During Day use the downstairs temperature sensor</li>
+<li>During the evening use the upstairs temperature sensor</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This automation allows creation of a virtual thermostat in
+SmartThings, to allow users (via SmartThings App) or other
+automations to see and adjust the set points in use on the “remote
+sensor thermostat”. This is not required to use the remote sensor,
+but makes it much easier to see the operating settings remote sensor
+is using and integrate with other SmartThings automations.</li>
+<li>Because the temperature sensor is commonly not the Nest Thermostat
+temperature reading, this automation adjusts the thermostat set point
+higher / lower to force the HVAC system on/off. This can cause
+confusion when one looks at the physical thermostat (or thru the
+native Nest Mobile App or Nest Web access), in that the set points
+can seem artificially high or low both during operation, and off
+times. If one looks at the virtual thermostat settings will appear
+“normal” or “as expected”. This is done because the relationship of
+the physical thermostat to the remote sensors in use at this time is
+not “fixed” or “constant”. The settings on the physical thermostat
+are “forcing on” or “forcing off” the HVAC system based on the
+automation’s temperature measurements.</li>
+<li>Temperature settings done on the virtual thermostat (either manually,
+or via another SmartApp) override the schedule in NST Manager for 4
+hours, or until the next schedule change - whichever occurs first.</li>
+</ul>
+<div class="line-block">
+<div class="line">The temperature setting entered when configuring remote sensor, are
+the “last default” or “last resort” temperature settings that will be
+used if no schedule matches (see Schedules above).</div>
+<div class="line">[Option descriptions/screenshots coming Soon]</div>
+</div>
+</div>
+<div class="section" id="leak-detection">
+<h3>Leak Detection<a class="headerlink" href="#leak-detection" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id7"><span class="problematic" id="id8">|nm\_leak\_icon.png|</span></a> <strong>Automates turning off HVAC system if a water
+sensor is WET. Commonly used to detect leaks in HVAC system or water in
+basement</strong></p>
+<ul class="simple">
+<li>If any monitored water sensors become WET, the automation will turn
+off the HVAC unit (connected to this thermostat) until all water
+sensors return to a dry state.</li>
+</ul>
+<p>[Option descriptions/screenshots coming Soon]</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="contact">
+<h3>Contact<a class="headerlink" href="#contact" title="Permalink to this headline">¶</a></h3>
+<p><strong>Automates setting Thermostat to ECO temperature
+settings if a door or window contact is left open</strong></p>
+<ul class="simple">
+<li>If any monitored contact sensors become open, the automation will set
+the HVAC unit to ECO (connected to this thermostat) until all contact
+sensors return to the closed state.</li>
+</ul>
+<p>This automation will only return the system from ECO if it set the
+system to ECO.</p>
+<div class="line-block">
+<div class="line">Time, ST mode, or HVAC state restrictions can be set to restrict
+operations.</div>
+<div class="line">[Option descriptions/screenshots coming Soon]</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="external-temp">
+<h3>External Temp<a class="headerlink" href="#external-temp" title="Permalink to this headline">¶</a></h3>
+<p><strong>Automates turning HVAC system to ECO
+temperature settings if external and thermostat temperatures match</strong></p>
+<p>This is commonly used to save energy. This automation typically relies
+on the Weather device handler be enabled in NST Manager. It can be
+configured to use an external temperature sensor installed at the
+location (however dewpoint checks will not be available).</p>
+<p>This automation does not consider inside temperature, just the desired
+setpoint vs outside temperature.</p>
+<p>This automation will set the HVAC to ECO (and return from ECO) if:</p>
+<ul class="simple">
+<li>external temperature is lower than desired set point temperature with
+HVAC system set to COOL and external dewpoint is not in uncomfortable
+range</li>
+<li>external temperature is higher than desired set point temperature
+with HVAC system set to HEAT and external dewpoint is not in
+uncomfortable range</li>
+<li>external temperature is within low and high set points with HVAC
+system set to AUTO and dewpoint is not in uncomfortable range</li>
+</ul>
+<p>This automation will only return the system from ECO if it set the
+system to ECO.</p>
+<div class="line-block">
+<div class="line">Time, ST mode, or HVAC state restrictions can be set to restrict
+operations.</div>
+<div class="line">[Option descriptions/screenshots coming Soon]</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="humidifier-control">
+<h3>Humidifier Control<a class="headerlink" href="#humidifier-control" title="Permalink to this headline">¶</a></h3>
+<p><strong>Automates turning humidifier on/off based on
+external temperatures</strong></p>
+<div class="line-block">
+<div class="line">This automation turns a switch on/off to control humidifier(s). It can
+be used with external humidifiers connected to a SmartThings switch,
+or HVAC installed humidifiers if a device handler is available that
+supports SmartThings switch capabilities. See <a class="reference external" href="NST_Manager#nst_humidity">NST Humidifier
+Info</a></div>
+<div class="line">This calculates the optimal humidity level based on exterior
+temperature.
+<a class="reference external" href="http://www.livingwithmyhome.com/201-home-tips/pillar-to-post-central-humidifier.aspx">http://www.livingwithmyhome.com/201-home-tips/pillar-to-post-central-humidifier.aspx</a></div>
+<div class="line">This automation typically relies on the Weather device handler be
+enabled in NST Manager. It can be configured to use an external
+temperature sensor installed at the location. This automation will set
+the switch on to call for humidification, and off when humidity level
+is reached/exceeded.</div>
+</div>
+<div class="line-block">
+<div class="line">Time, ST mode, or HVAC state restrictions can be set to restrict
+operations.</div>
+<div class="line">[Option descriptions/screenshots coming Soon]</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="device-handlers">
+<h1>Device Handlers<a class="headerlink" href="#device-handlers" title="Permalink to this headline">¶</a></h1>
+<p>Device Handlers are installed via the IDE (see <a class="reference external" href="NST_Manager#Installation_Instructions">installation
+instructions</a> below) and are
+created when configuring the NST Manager application. These are the
+devices handlers for the physical Nest devices such as thermostat,
+protects, camera, and there are virtual device handlers that can be
+create for Weather, Presence, and virtual thermostats.</p>
+<div class="section" id="nest-thermostat">
+<h2>Nest Thermostat<a class="headerlink" href="#nest-thermostat" title="Permalink to this headline">¶</a></h2>
+<p>One thermostat device will be created for each thermostat at a Nest
+location.</p>
+<p>SmartThings SmartApps can control the following functions with this
+device handler:</p>
+<ul class="simple">
+<li>Change Temperature Set Points</li>
+<li>Change Operating Mode (Off, Eco, Heat, Cool, Auto)</li>
+<li>Set the Nest location to Home/Away</li>
+<li>Run the HVAC Fan (<em>Run time length is determined in the Nest Mobile
+App</em>)</li>
+</ul>
+<p>Each device will contain a graph with history for:</p>
+<ul class="simple">
+<li>Set points (Today)</li>
+<li>Ambient Temp (Today and Yesterday)</li>
+<li>Humidity (Today)</li>
+<li>Thermostat Operating modes (Today)</li>
+<li>External Temperature (If Weather Device has been enabled) (Today);
+Weather is from WeatherUnderground based on the Hub’s location by
+default, and can be set in NST Manager</li>
+</ul>
+<p><em>This device is compatible with all SmartThings standard `thermostat
+capabilities &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#thermostat&gt;`__</em></p>
+<p>Device voice reports can be enabled for thermostats, please see
+Integrations info below. <a class="reference external" href="NST_Manager#3rd_Party_Integrations">3rd Party
+Integrations</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="nest-protect">
+<h2>Nest Protect<a class="headerlink" href="#nest-protect" title="Permalink to this headline">¶</a></h2>
+<p>One protect device will be created for each protect at a Nest location.</p>
+<p>The device contains the following attributes:</p>
+<ul class="simple">
+<li>CO and Smoke Detector for SmartThings <em>This device handler is
+compatible with all of SmartThings standard `Carbon
+Monoxide &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#carbon-monoxide-detector&gt;`__
+and `Smoke
+detector &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#smoke-detector&gt;`__
+capabilities</em></li>
+<li>Battery reporting capabilities to monitor battery status.</li>
+<li>It can be integrated into Smart Home Monitor (SHM) and can trigger
+alarms based on smoke or CO2 being detected by the Protect.
+(<strong>*IMPORTANT: This does not function real-time and may be delayed
+based on ST or Nest cloud operations*</strong>)</li>
+<li>Supports testing in the DTH smoke and CO2 alerts for testing
+automations in SmartThings.</li>
+</ul>
+<p>Nest Protects interact with Nest thermostats when smoke or CO2 events
+occur. See:
+<a class="reference external" href="https://nest.com/support/article/Learn-how-Nest-products-work-together">https://nest.com/support/article/Learn-how-Nest-products-work-together</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="nest-camera">
+<h2>Nest Camera<a class="headerlink" href="#nest-camera" title="Permalink to this headline">¶</a></h2>
+<p>One camera device will be created for each Nest Camera at a Nest
+location.</p>
+<p>SmartThings SmartApps can view / do the following with Nest Cams:</p>
+<ul class="simple">
+<li>View the Live video stream (<em>This requires enabling public streaming
+on each camera in the Nest web site https://home.nest.com</em>)</li>
+<li>View the still image of the current view</li>
+<li>Take a snapshot in the device handler and view in the devices
+carousel tile</li>
+<li>View the last motion event animation</li>
+<li>Start and Stop camera streaming</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><em>This device handler is compatible with all of SmartThings standard
+`Image
+Capture &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#image-capture&gt;`__,
+`sound
+sensor &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#sound-sensor&gt;`__
+and `Motion
+sensor &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#motion-sensor&gt;`__
+capabilities</em></div>
+</div>
+<ul class="simple">
+<li>Note sound and motion sensor reports from nest are delayed by Nest
+until after the event has finished</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="nest-weather">
+<h2>Nest Weather<a class="headerlink" href="#nest-weather" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>This virtual device gathers weather data from Weather Underground and
+provides SmartThings access to this weather data. It can be used by
+External Temperature Sensor automation (below) or Humidifier
+automation to monitor external temperatures and dewpoints.</li>
+<li>This device will also send local weather alerts via a SmartThings
+push notification (This can be disabled in the NST Manager app)</li>
+<li>Other applications can use it also, as it is compatible with Smart
+Weather Tile capabilities.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="nest-presence">
+<h2>Nest Presence<a class="headerlink" href="#nest-presence" title="Permalink to this headline">¶</a></h2>
+<p>This device allows provides Nest Locations Home/Away status as a virtual
+presence sensor for in any routine or SmartApp that supports the
+presence sensor capability.</p>
+<p>Nest can automatically update Home/Away with Home Away Assist
+<a class="reference external" href="https://nest.com/support/article/How-Home-Away-Assist-decides-to-switch-your-home-to-Home-or-Away">https://nest.com/support/article/How-Home-Away-Assist-decides-to-switch-your-home-to-Home-or-Away</a></p>
+<p><em>This virtual device is compatible with the SmartThings standard
+`presence
+sensor &lt;http://docs.smartthings.com/en/latest/capabilities-reference.html#presence-sensor&gt;`__
+capabilities</em></p>
+</div>
+<div class="section" id="nest-virtual-thermostat">
+<h2>Nest Virtual Thermostat<a class="headerlink" href="#nest-virtual-thermostat" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>This device is the same code and has all of the same features as the
+thermostat above. With the exception that it can only be created when
+configuring Remote Sensor automation.</li>
+<li>The virtual device can be used to provide easy control of the new
+virtual zone that is created by enabling the remote sensor
+automation.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="project-summary">
+<h1>Project Summary<a class="headerlink" href="#project-summary" title="Permalink to this headline">¶</a></h1>
+<p><strong>Authors</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="55%" />
+<col width="45%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Name</th>
+<th class="head">Community Handle</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Anthony Santilli</strong></td>
+<td>&#64;tonesto7</td>
+</tr>
+<tr class="row-odd"><td><strong>Eric Schott</strong></td>
+<td>&#64;E_Sch</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Contributors</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#64;ghesp - Thanks for all your help…</td>
+</tr>
+<tr class="row-even"><td>&#64;desertblade</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Testers</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>&#64;shmookles - Thanks for helping with testing and criticism.</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="version-info">
+<h2>Version Info<a class="headerlink" href="#version-info" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="54%" />
+<col width="46%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>SmartApps:</strong></th>
+<th class="head"><strong>Version:</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NST Manager</td>
+<td><em>v5.1.2</em></td>
+</tr>
+<tr class="row-odd"><td>NST Automations</td>
+<td><em>v5.1.2</em></td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Devices:</strong></th>
+<th class="head"><strong>Version:</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Thermostat</td>
+<td><em>v5.1.0</em></td>
+</tr>
+<tr class="row-odd"><td>Protect</td>
+<td><em>v5.1.0</em></td>
+</tr>
+<tr class="row-even"><td>Presence</td>
+<td><em>v5.1.0</em></td>
+</tr>
+<tr class="row-odd"><td>Weather</td>
+<td><em>v5.1.0</em></td>
+</tr>
+<tr class="row-even"><td>Camera</td>
+<td><em>v5.1.0</em></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="advantages">
+<h2>Advantages<a class="headerlink" href="#advantages" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Support for thermostats, protects, cameras and ability to
+add/control/remove multiples devices from a single SmartApp<ul>
+<li>Support latest Nest features including ECO mode</li>
+</ul>
+</li>
+<li>No need to repeatedly enter device serial number and login info in
+preferences</li>
+<li>Nest Login info is not stored by the application</li>
+<li>No need to use 3rd Party Polling apps for device updates<ul>
+<li>Since there is only a single poll for all devices, updates are
+more often</li>
+</ul>
+</li>
+<li>Many built in automations that may be enabled without needing to
+install additional SmartApps</li>
+<li>One common API and device capabilities for Nest devices; complies
+with SmartThings Device Capabilities</li>
+<li>The devices look great :smile:</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="latest-announcements">
+<h2>Latest Announcements<a class="headerlink" href="#latest-announcements" title="Permalink to this headline">¶</a></h2>
+<p><strong>Please visit this community page for latest announcements and
+features:</strong></p>
+<ul class="simple">
+<li><strong>`V5.0.9 Update
+Announcement &lt;https://community.smartthings.com/t/release-nst-manager-v5-0/83228/341&gt;`__</strong></li>
+</ul>
+<p><strong>BETA Program:</strong></p>
+<ul class="simple">
+<li><strong>`V5.x.x BETA
+Information &lt;https://community.smartthings.com/t/beta-nst-manager&gt;`__</strong></li>
+</ul>
+<p><strong>Previous v5 Release Announcement Posts:</strong></p>
+<ul class="simple">
+<li><strong>`V5.0.0 Release
+Announcement &lt;https://community.smartthings.com/t/release-nst-manager-v5-0&gt;`__</strong></li>
+</ul>
+<p><strong>Previous v4 Release Announcement Posts:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://community.smartthings.com/t/release-nest-manager-4-0/60052/648">V4.5 Update
+Announcement</a></li>
+<li><a class="reference external" href="https://community.smartthings.com/t/release-nest-manager-4-0/60052/691">V4.5.1 Update
+Announcement</a></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="reference-links">
+<h2>Reference Links<a class="headerlink" href="#reference-links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/tonesto7/nest-manager/issues">GitHub Project Issues
+Link</a></li>
+<li><a class="reference external" href="https://community.smartthings.com/t/release-nst-manager-v5-0/">SmartThings Community Forum
+Link</a></li>
+<li><a class="reference external" href="http://docs.smartthings.com/en/latest/tools-and-ide/github-integration.html">SmartThings IDE GitHub Integration
+Instructions</a></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="things-to-know">
+<h2>Things to Know<a class="headerlink" href="#things-to-know" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Please ensure <strong>if upgrading, to closely follow the upgrade
+instructions in this document</strong>.</li>
+<li>When upgrading an installation running versions prior to V4.0 it is
+required to delete all built-in automations prior to upgrade and
+re-create them after the upgrade is complete.</li>
+<li>Each install of this SmartApp will only support <strong>One</strong>
+location/structure and the Thermostats, Protects and Cameras within
+the Nest structure. If multiple SmartThings Locations are configured,
+NST Manager would be installed in each SmartThings location (if there
+are Nest devices in each location).</li>
+<li>”The token used with this application is using my ‘Works for Nest’
+distribution <em>appId</em> and <em>secret</em>. We are currently under review by
+Nest to extend our available tokens.” <strong>We do not have the ability
+to see any Nest data at the location or who is using the token</strong></li>
+<li>In the Nest mobile application, permission updates may need to
+updated for ST NST Manager in the “Works with Nest” section under
+“Account” -&gt; “Works with Nest” -&gt; “ST-Integration”, to ensure the
+latest Nest features are integrated with NST Manager.</li>
+<li><strong>If in the Nest Mobile app, you see multiple ST-Integration</strong> under
+<em>Account</em> -&gt; <em>Works with Nest</em>, and you do not have multiple Nest
+Locations, you should delete the all the <em>ST-Integration</em> items, and
+then go into the SmartThings Mobile app -&gt; Nest Manager and
+re-authorize Nest Manager.</li>
+<li><strong>When logging into the IDE (to install or gather IDE “Live Logging”,
+ensure to login to the proper shard. We suggest to use
+http://ide.smartthings.com as it will redirect to the proper shard.
+If NST Manager is installed in the wrong shard, NST Manager will not
+show up in the mobile app as available to be configured.</strong></li>
+<li>For folks using Celsius temperature settings, there is an optional
+step to perform during install/upgrade to ensure UIs for the
+thermostat and weather device appear correctly. This is due to a ST
+limitation that background colors and enums cannot be changed after
+compile-time for device handlers.<ul>
+<li>In the 4.5 and later device handlers for weather and thermostat
+devices, make a change in method compileForC (ensure to save, and
+publish for me):<ul>
+<li>OLD: def retVal = false // if using C mode, set this to true so
+that enums and colors are correct (due to ST issue of compile
+time evaluation)</li>
+<li>NEW: def retVal = true // if using C mode, set this to true so
+that enums and colors are correct (due to ST issue of compile
+time evaluation)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>Device Handlers<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Devices that use html tile (thermostat, weather) will not refresh the
+HTML portions without going out of the device and back in again when
+in the SmartThings mobile app.</li>
+<li>Device names can be edited in multiple locations: NST Manager, in the
+device handler settings page, and in the SmartThings IDE. NST Manager
+by default will manage/override these settings. This can be disabled
+in NST Manager Device Customization.</li>
+</ul>
+</div>
+<div class="section" id="nest-eco-thermostat-mode">
+<h3>Nest (Eco) Thermostat Mode<a class="headerlink" href="#nest-eco-thermostat-mode" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Nest mode “eco” is interesting in relation to SmartThings and
+SmartApps. SmartThings thermostat capabilities
+<a class="reference external" href="http://docs.smartthings.com/en/latest/capabilities-reference.html#thermostat">http://docs.smartthings.com/en/latest/capabilities-reference.html#thermostat</a>
+only allows off, heat, cool, auto, emergency-heat as settings. So
+when a Nest thermostat is in ECO mode, the thermostat dth will
+display ECO state, but a SmartApp using SmartThings thermostat
+capabilities will see one of heat, cool, auto as the state. This has
+the following things to be aware of:<ul>
+<li>if using CoRE or other SmartApp that is normalized to ST
+capabilities, there will not be a standard command to set eco
+mode. Create a “custom” or device specific command in CoRE to call
+eco().</li>
+<li>If this is done, when setting the thermostat back to auto (or
+heat, cool), CoRE’s command optimization will look at the ST view
+of status, and if what is being set is the same, it will not send
+the command to the device to come out of ECO. This can be resolved
+for that piston by setting “Disable Command Optimizations” to ON.
+This ensures CoRE issues the command even if it “thinks” the
+device is in that state.</li>
+<li>The thermostat device does support a custom attribute
+“nestThermostatMode” which shows ECO state in addition to the
+standard ST capabilities states.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h3>Nest Protect<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Nest protects report battery status binary (good/bad), there will not
+be a gradual battery drop visible (SmartThings reports battery level
+as a percent).</li>
+</ul>
+</div>
+<div class="section" id="nest-home-away">
+<h3>Nest Home/Away<a class="headerlink" href="#nest-home-away" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Nest home / away has similar interesting effects in relation the
+SmartThings and SmartApps<ul>
+<li>Nest Thermostats (and Protects (Smoke Detector / CO2 Detector),
+and Cameras) do special things when in away mode (See Nest
+documentation as this regularly changes/improves
+<a class="reference external" href="https://nest.com/support/article/Learn-how-Nest-products-work-together">https://nest.com/support/article/Learn-how-Nest-products-work-together</a>)<ul>
+<li>Key is when in ECO, (and commonly AWAY) mode, temperature
+settings cannot be changed on the thermostat until the
+thermostat is taken out of ECO mode.</li>
+<li>A Nest thermostat can be configured to automatically go to ECO
+mode when AWAY, and return to the previous mode when AWAY ends.
+(See Home/Away Assist in the Nest application/website)</li>
+</ul>
+</li>
+<li>Automations (NestMode below) can be configured to control Nest
+home/away based on ST modes, OR</li>
+<li>in other SmartApps, create custom commands for home() and
+present() and call these based on automation needs. These commands
+are in the thermostat device, The virtual presence sensor device
+uses the API setPresence() to toggle home/away.</li>
+</ul>
+</li>
+<li>Nest Home/Away Assist has been challenging since the changes adding
+ECO mode by Nest. Many users experience the home randomly coming out
+of away mode (and therefore out of ECO mode if home / away assist is
+enabled)
+<a class="reference external" href="https://community.smartthings.com/t/removed-nest-manager-4-0/60052/418">https://community.smartthings.com/t/removed-nest-manager-4-0/60052/418</a>.
+This issue has been reported to Nest. Some have suggested that Nest
+seems to do this on some Nest schedule changes. NestMode Automation
+(below) can automate setting nest to eco when it sets Nest AWAY, and
+setting back to ON when setting Nest to HOME. If this feature of
+NestMode automation is enabled, consider what other automations are
+also adjusting Nest Home/Away on a thermostat.</li>
+</ul>
+</div>
+<div class="section" id="nest-api-rate-limits">
+<h3>Nest API Rate Limits<a class="headerlink" href="#nest-api-rate-limits" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Nest rate limits commands to their APIs based on devices and
+structures. This is done to ensure availability of their services,
+and to not impact the operation of the devices.<ul>
+<li>Writes (changes of temps or modes) to Nest devices requires the
+device to wake up and synchronize its state. This can impact
+battery life so Nest implemented rate limits.</li>
+<li>Nest describes this in:
+<a class="reference external" href="https://developer.nest.com/documentation/cloud/data-rate-limits/">https://developer.nest.com/documentation/cloud/data-rate-limits/</a></li>
+<li>How commands work with NST Manager:<ul>
+<li>It is important when designing automation(s) using Nest, that
+automation(s) do not require more changes than Nest will allow
+in a period of time.</li>
+<li>NST Manager for SmartThings implements throttling to keep
+requests within Nest�s rate limits. If commands are received
+for a device that exceeds the Nest rate limits, the NST Manager
+will slow the commands to 1 per minute for the device that is
+over the limit.</li>
+</ul>
+</li>
+<li>Nest may reject commands if the battery state of the Nest device
+is low. If this occurs, Nest will not accept any commands for the
+device.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="other-requests">
+<h3>Other Requests<a class="headerlink" href="#other-requests" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Wanting to use Nest Thermostat or Protect as a SmartThings motion
+sensor:<ul>
+<li>Nest does not give us any direct access to the status of the
+motion sensor. They only may update home / away - based on Home /
+Away Assist. We cannot see from their API the motion sensor status
+for Thermostats or Protects.</li>
+<li>Some motion capabilities are available with the NestCam, however
+Nest reports these *after* the event has ended.</li>
+</ul>
+</li>
+<li>Want to adjust humidity settings on thermostat<ul>
+<li>Nest does not give us API access to set humidity. Some folks have
+used old Nest drivers to allow this, not using approved Nest APIs.
+<a class="reference external" href="https://github.com/jdc0730/device-type.nest-humidity">https://github.com/jdc0730/device-type.nest-humidity</a>.</li>
+</ul>
+</li>
+<li>Want to use Protect as a siren device in SmartThings<ul>
+<li>Nest does not provide API access to components of the smoke/CO2
+detector.</li>
+</ul>
+</li>
+<li>Better integration of Nest thermostat schedules with NST Manager<ul>
+<li>Nest API does not give us access to schedule settings / times, so
+we cannot “see them” to use, or modify them.</li>
+<li>Related to this is asks for us to be able to “resume” current Nest
+schedule; Nest does not offer a resume command for temperature
+overrides, beyond the next “schedule change time”</li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="rd-party-smartapp-compatibility-confirmed">
+<h2>3rd-Party SmartApp Compatibility (Confirmed)<a class="headerlink" href="#rd-party-smartapp-compatibility-confirmed" title="Permalink to this headline">¶</a></h2>
+<p>NST Manager devices follow SmartThings Thermostat, smoke / CO2 detector,
+Camera, Weather device type capabilities. These should work fine with
+all SmartApps that support thermostat, smoke detector, camera, or
+weather capabilities.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="89%" />
+<col width="11%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">SmartApp</th>
+<th class="head">Author</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://community.smartthings.com/t/beta-milestone-1-core-communitys-own-rules-engine/48189?u=tonesto7">CoRE</a></td>
+<td>&#64;ady624</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://community.smartthings.com/t/release-ask-alexa">Ask Alexa</a></td>
+<td>&#64;MichaelS</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://smarttiles.click/">SmartTiles</a></td>
+<td>&#64;625alex</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://community.smartthings.com/t/release-keenect-v1-2-0-optional-separate-vo-settings-for-cooling-vent-obstruction-auto-clear/39119">Keenect</a></td>
+<td>&#64;Mike_Maxwell</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="rd-party-integrations">
+<h1>3rd Party Integrations<a class="headerlink" href="#rd-party-integrations" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">* <strong>`Ask Alexa &lt;Ask_Alexa&gt;`__</strong> by (Michael Struck)</div>
+</div>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="section" id="installation-instructions">
+<h1>Installation Instructions<a class="headerlink" href="#installation-instructions" title="Permalink to this headline">¶</a></h1>
+<p>Thanks &#64;MichaelS for letting me borrow from Ask Alexa Install
+Instructions…</p>
+<p>Community created video walks through the install process (Based on an
+older version of Nest Manager):</p>
+<ul class="simple">
+<li><a class="reference external" href="https://www.youtube.com/embed/gcmVSmoGQ7c">NST-Manager Install Video
+Walkthrough</a></li>
+</ul>
+<p>”’Point a browser to the SmartThings IDE and <strong>Log In</strong>.</p>
+<p><em>https://ide.smartthings.com should redirect to the proper shard, if not
+below are the current shards:</em></p>
+<ul class="simple">
+<li>US (New Accounts Since March 2016):
+<a class="reference external" href="https://graph-na02-useast1.api.smartthings.com/">https://graph-na02-useast1.api.smartthings.com/</a></li>
+<li>US: <a class="reference external" href="https://graph.smartthings.com">https://graph.smartthings.com</a> or <a class="reference external" href="https://ide.smartthings.com">https://ide.smartthings.com</a></li>
+<li>Europe: <a class="reference external" href="https://graph-eu01-euwest1.api.smartthings.com">https://graph-eu01-euwest1.api.smartthings.com</a></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="using-git-integration-recommended">
+<h2>Using Git Integration (Recommended)<a class="headerlink" href="#using-git-integration-recommended" title="Permalink to this headline">¶</a></h2>
+<p><em>Enabling the GitHub Integration in the IDE is by far the easiest way to
+install and get the latest updates for NST Manager, Automations,
+Presence, Protect, Thermostat, and Weather devices.</em></p>
+<p>To enable Git integration (one time configuration) under the IDE please
+visit here for instructions: <strong>*`IDE GitHub Integration
+Instructions &lt;http://docs.smartthings.com/en/latest/tools-and-ide/github-integration.html&gt;`__*</strong></p>
+<p><strong>NOTE: Git Integration is not currently available outside of US and
+UK</strong></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<div class="section" id="installing-the-manager-and-automation-app">
+<h3>Installing The Manager and Automation App<a class="headerlink" href="#installing-the-manager-and-automation-app" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>First, find the <strong>Settings</strong> button at the top of SmartThings IDE
+page (this will only appear after completing the one time integration
+with GitHub)</li>
+<li>Clicking this button will open the GitHub Repository Integration
+page.</li>
+<li>To find the <strong>NST Manager</strong> SmartApp code, enter the information
+below:</li>
+</ul>
+<p><strong>Owner:</strong> tonesto7</p>
+<p><strong>Name:</strong> nest-manager</p>
+<p><strong>Branch:</strong> master</p>
+<ul>
+<li><p class="first">Close the GitHub Repository Integration page</p>
+</li>
+<li><p class="first">Next, click the <strong>Update from Repo</strong> button at the upper-right corner
+of the IDE</p>
+</li>
+<li><p class="first">Click on <strong>nest-manager (master) from the drop down menu</strong></p>
+</li>
+<li><p class="first">On the right-hand column labelled New (Only in Github), scroll down
+to click the apps to install. This will typically be:
+<code class="docutils literal"><span class="pre">nest-manager.groovy</span></code></p>
+<p><code class="docutils literal"><span class="pre">nst-automations.groovy</span></code></p>
+</li>
+<li><p class="first">Check the Publish box and Click the <strong>Execute Update</strong> in the
+bottom-right corner of the screen. When done syncing, the new apps
+should now appear in the IDE. If they ever change color, that
+indicates a new version is available.</p>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><strong>*REMINDER!!!: Remember to Enable OAuth under the NST Manager’s App
+Settings (Instructions Below)*</strong></div>
+</div>
+</div>
+<div class="section" id="installing-the-presence-protect-thermostat-camera-and-weather-device-handlers">
+<h3>Installing the Presence, Protect, Thermostat, Camera, and Weather Device Handlers<a class="headerlink" href="#installing-the-presence-protect-thermostat-camera-and-weather-device-handlers" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Go to “<strong>My Device Handlers</strong>” in the IDE</li>
+<li>Under My Device Handlers Click on <strong>*Update from Repo*</strong> and select
+<strong>*nest-manager*</strong> from the drop-down</li>
+<li>Check the box next to <strong>*nest-presence*</strong>, <strong>*nest-protect*</strong>,
+<strong>*nest-thermostat*</strong>, <strong>*nest-camera*</strong> and <strong>*nest-weather*</strong> then
+check the <strong>Publish</strong> box and click <strong>Execute Update</strong></li>
+</ul>
+<p>That’s it in the IDE… Just install “<strong>NST Manager</strong>” from the
+<strong>*Marketplace &gt; MyApps*</strong> under the mobile app.</p>
+<p>When updates are available to the source code the Link color change from
+black in the IDE.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="section" id="the-manual-way">
+<h2>The Manual Way<a class="headerlink" href="#the-manual-way" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">=== NST Manager and NST Automations Code Installation ===</div>
+</div>
+<p>The code for the SmartThings SmartApp is found on the GitHub site:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>SmartApps:</strong></th>
+<th class="head"><strong>Source Code URL:</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NST Manager:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/smartapps/tonesto7/nest-manager.src/nest-manager.groovy</em></td>
+</tr>
+<tr class="row-odd"><td>NST Automations:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/smartapps/tonesto7/nst-automations.src/nst-automations.groovy</em></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li>While on the GitHub site, find the <strong>Raw</strong> button and click it.</li>
+<li>This will bring up a non-formatted page with just the code present.</li>
+<li>Click on the text inside window one time then press (<strong>*CTRL+A*</strong>) on
+the keyboard to select all of the code. (Command A on MacOS</li>
+<li>Finally press (<strong>*CTRL+C*</strong>) to copy the code to the clipboard.
+(Command C on MacOS)</li>
+</ul>
+<p><strong>Point a browser to the SmartThings IDE</strong> and <strong>Log In</strong>.</p>
+<p><em>https://ide.smartthings.com should redirect, if not below are the
+current shards:</em></p>
+<ul class="simple">
+<li>US (New Accounts Since March 2016):
+<a class="reference external" href="https://graph-na02-useast1.api.smartthings.com/">https://graph-na02-useast1.api.smartthings.com/</a></li>
+<li>US: <a class="reference external" href="https://graph.smartthings.com">https://graph.smartthings.com</a> or <a class="reference external" href="https://ide.smartthings.com">https://ide.smartthings.com</a></li>
+<li>Europe: <a class="reference external" href="https://graph-eu01-euwest1.api.smartthings.com">https://graph-eu01-euwest1.api.smartthings.com</a></li>
+<li>Once logged in, find the <strong>My SmartApps</strong> link on the top of the
+page. Clicking <strong>My SmartApps</strong> will allow creating a new SmartApp.</li>
+<li>Find the button on this page labeled <strong>+New SmartApp</strong> and click it.</li>
+<li>Since the code in the clipboard, find the tab along the top section
+called <strong>From Code</strong>.</li>
+<li>Click inside the large text box area provided, and paste the code
+copied from GitHub by pressing (<strong>*CTRL+V*</strong>). (Command V on MacOS)</li>
+<li>Click <strong>Create</strong> in the bottom left corner of the page.</li>
+<li>This will bring up another page, with the code now formatted within
+the IDE. If the code was copied correctly, there are no other steps
+except to save and publish the code. In the upper right corner of the
+page, find and click <strong>Save</strong>. Now, click <strong>Publish (For Me)</strong>. There
+should receive a confirmation on screen that the code has been
+published successfully.</li>
+<li>Repeat the steps above for the NST Automations App.</li>
+</ul>
+<p><strong>*REMINDER!!!: Remember to Enable OAuth under the NST Manager’s App
+Settings (Instructions Below)*</strong></p>
+<div class="section" id="manager-and-automation-app-s-source-code">
+<h3>Manager and Automation App’s Source Code<a class="headerlink" href="#manager-and-automation-app-s-source-code" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>SmartApp:</strong></th>
+<th class="head"><strong>Source Code URL:</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>NST Manager:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/smartapps/tonesto7/nest-manager.src/nest-manager.groovy</em></td>
+</tr>
+<tr class="row-odd"><td>NST Automations:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/smartapps/tonesto7/nest-manager.src/nst-automations.groovy</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nest-device-installation">
+<h3>Nest Device Installation<a class="headerlink" href="#nest-device-installation" title="Permalink to this headline">¶</a></h3>
+<p>Just use the same steps as above except click on <strong>*”My Devices”*</strong> and
+then <strong>*”+ New Device”*</strong> and copy paste the code for each device listed
+below.</p>
+<ul class="simple">
+<li><strong>FYI:</strong> It is recommended to install all of the device handlers
+below even if all devices are not present / in use - as we check that
+they are present to avoid later configuration issues as new devices
+are added in NST Manager.</li>
+</ul>
+<div class="section" id="device-source-code">
+<h4>Device Source Code<a class="headerlink" href="#device-source-code" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="86%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Device Type:</strong></th>
+<th class="head"><strong>Source Code URL:</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Thermostat:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-thermostat.src/nest-thermostat.groovy</em></td>
+</tr>
+<tr class="row-odd"><td>Protect:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-protect.src/nest-protect.groovy</em></td>
+</tr>
+<tr class="row-even"><td>Presence:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-presence.src/nest-presence.groovy</em></td>
+</tr>
+<tr class="row-odd"><td>Weather:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-weather.src/nest-weather.groovy</em></td>
+</tr>
+<tr class="row-even"><td>Nest Cam:</td>
+<td><em>https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-camera.src/nest-camera.groovy</em></td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="enabling-oauth">
+<h2>Enabling OAuth<a class="headerlink" href="#enabling-oauth" title="Permalink to this headline">¶</a></h2>
+<p><strong>NST Manager</strong> requires OAuth to operate correctly.</p>
+<p><strong>ONLY enable OAuth for NST Manager, DO NOT enable for NST Automations
+SmartApp, as that will cause installation failures</strong></p>
+<p>To enable OAuth, In the IDE, “My SmartApps” -&gt; NST Manager” -&gt; find and
+click the <strong>App Settings</strong> button in the upper right corner of the page.</p>
+<p>From here, find the <strong>OAuth</strong> section toward the bottom of the page.</p>
+<p>Clicking the <strong>OAuth</strong> link will reveal a button labeled <strong>Enable OAuth
+in Smart App</strong>. Click this button. The screen will update giving a
+unique code for the <strong>Client ID</strong> and <strong>Client Secret</strong>. These are the
+foundations of the security and should be kept secret. This setup is
+done once and automatically filled in, it is not required to memorize or
+write down these codes.</p>
+<p>The final step is to press the <strong>Update</strong> button at the bottom left
+corner of the screen, or go back to the code by using the button in the
+upper-right region of the page, then <strong>Save</strong>, then <strong>Publish</strong> the
+SmartApp again.</p>
+</div>
+<div class="section" id="applying-updates-to-existing-code">
+<h2>Applying Updates to Existing Code<a class="headerlink" href="#applying-updates-to-existing-code" title="Permalink to this headline">¶</a></h2>
+<p><strong>OLD RELEASES NOTICE:</strong></p>
+<ol class="arabic simple">
+<li>Due to changes to our github repo structure for v5.x.x users with
+versions v3.x.x or lower will likely have broken installs.</li>
+<li>Please DO NOT attempt to update from v3.x.x or lower to v5.x.x.<ul>
+<li>These upgrades haven’t been tested and will not be supported. We
+have seen a few users that did not properly update from V3 to V4
+(this upgrade required automations to be deleted and re-created in
+V4). If earlier updates were not performed properly, the upgrade
+from V4.5.x to V5 will not work.</li>
+<li>Please perform a complete uninstall/reinstall</li>
+</ul>
+</li>
+</ol>
+<p><strong>IMPORTANT NOTE:</strong> The update to version 5.0 requires using the
+separated automations file. If there are existing automations it’s
+imperative to install the new automations file along side the manager
+file then update all device handlers. The new manager will begin a
+migration process for exist automations which will back them up and
+restore them under the new file and remove the old automations. There is
+no user interaction required beyond updating the files themselves
+properly.</p>
+<p>Performing updates using Git Integration is the fastest method of
+updating. Just follow the same methods as the install steps above:</p>
+<ol class="arabic simple">
+<li>Click on <strong>*Update from Repo*</strong></li>
+<li>Select <strong>*nest-manager (master)*</strong> from the dropdown</li>
+<li>Once the Update from Repo page is shown look under the left column
+titled <strong>Obsolete (updated on GitHub)</strong> check the box(es) next to
+(SmartApp or All of Device Handlers) that show an update.</li>
+<li><strong>Please NOTE:</strong> If updating an install from <em>v4.5.x to v5.0.0</em> then
+please check the box next to the new <strong>nst-automations.groovy</strong> file
+in the <strong>New (only in GitHub)</strong> box to the right.</li>
+<li>Once selected the necessary items check the <strong>*publish*</strong> box at the
+bottom right of the page.</li>
+<li>Click on <strong>*Execute Update*</strong>.</li>
+</ol>
+<p><em>Congratulation’s, done in the IDE. The SmartApps and Devices are up to
+date.</em></p>
+<p><strong>FYI:</strong> These steps must be performed under <em>My Devices</em> and <em>My
+SmartApps</em> respectively in order to update the manager and each of the
+device handlers.</p>
+<p><strong>Try to update the code in this order:</strong></p>
+<ul class="simple">
+<li>All Device Handlers</li>
+<li>NST Automations SmartApp</li>
+<li>NST Manager SmartApp</li>
+</ul>
+<div class="line-block">
+<div class="line">If Git Integration is not enabled or it’s not available in the
+SmartThings region, copy/paste the code from the source links above
+into each app/device and press <strong>Save</strong> then <strong>Publish</strong> for me.</div>
+</div>
+</div>
+</div>
+<div class="section" id="getting-nst-manager-installed-and-configured">
+<h1>Getting NST Manager Installed and Configured<a class="headerlink" href="#getting-nst-manager-installed-and-configured" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>Open the SmartThings Mobile App:</li>
+<li>Confirm location is setup correctly<ul>
+<li>go to three horizontal bars (lower right)</li>
+<li>go to select a location, and select settings (gear in upper right)</li>
+<li>ensure the location is correct, and hit “Done”</li>
+</ul>
+</li>
+<li>Go to “<strong>Marketplace</strong>” and select “<strong>SmartApps</strong>” tab.<ul>
+<li>Marketplace is the “building”, “star” or “sunlight” icon second
+from the right at the bottom of the mobile app</li>
+</ul>
+</li>
+<li>Scroll to the bottom of the list, select “<strong>My Apps</strong>”</li>
+<li>Select “<strong>NST Manager</strong>” from the list.</li>
+<li>Enter Nest Login credentials when prompted.</li>
+<li>Choose <strong>Structure</strong></li>
+<li>Choose <strong>Thermostats</strong></li>
+<li>Choose <strong>Protects</strong></li>
+<li>Choose <strong>Cameras</strong></li>
+<li>Choose <em>Add Presence Device</em> (Optional)</li>
+<li>Choose <em>Add Weather Device</em> (Optional)</li>
+<li>Tap <strong>“Next”</strong></li>
+<li>Review and Modify any preferences (Optional)</li>
+<li>Tap on “<strong>Done</strong>”</li>
+</ul>
+<div class="line-block">
+<div class="line">After initial setup of NST Manager and devices, setup is complete.
+Optionally enable / configure automations in NST Manager or other
+SmartApps.</div>
+</div>
+</div>
+<div class="section" id="manager-preferences">
+<h1>Manager Preferences<a class="headerlink" href="#manager-preferences" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><strong>*This section is still under construction and will be slowly
+populated as time allows*</strong></div>
+<div class="line">It is important when changing parameters in the ST mobile app to hit
+“Done” for the parameters to take effect. Hitting the back button may
+cause settings to not be properly applied. If you change anything, hit
+“Done” all “the way out”.</div>
+</div>
+<div class="section" id="notification-preferences">
+<h2>Notification Preferences<a class="headerlink" href="#notification-preferences" title="Permalink to this headline">¶</a></h2>
+<p>Notifications send message(s) when a certain action occurs.</p>
+<div class="section" id="contact-book">
+<h3>Contact Book<a class="headerlink" href="#contact-book" title="Permalink to this headline">¶</a></h3>
+<p><strong>The “*Send Notifications to*” input will not be displayed for users
+whose accounts do not have contact book enabled. If contact book isn’t
+available it cannot be enabled in the mobile app until SmartThings
+decides to add the toggle feature again. If the Contact book is still
+not available, there will be a toggle that will allow sending Push
+Messages instead of selecting individual users.</strong></p>
+<hr class="docutils" />
+<div class="section" id="enable-contact-book-option-on-smartthings-account-safe-hack">
+<h4>Enable Contact-Book Option on SmartThings Account (Safe Hack)<a class="headerlink" href="#enable-contact-book-option-on-smartthings-account-safe-hack" title="Permalink to this headline">¶</a></h4>
+<p>This is not the official method and is consider a hack. This should not
+cause any harm.</p>
+<ul class="simple">
+<li>Log into the IDE</li>
+<li>Browse to
+<a class="reference external" href="https://graph.api.smartthings.com/account/list">1</a>(<a class="reference external" href="https://graph.api.smartthings.com/account/list">https://graph.api.smartthings.com/account/list</a>)</li>
+<li>Click on the link for the Name of your account</li>
+<li>In a web browsers URL bar
+notice`https://graph.api.smartthings.com/account/show/%My_Unique_ID%`</li>
+<li>Just replace the `account/show` section with `contact`</li>
+<li>So it looks like this
+`https://graph.api.smartthings.com/contact/%My_Unique_ID%`</li>
+<li>Select +New Contact or Either of the Import Buttons to proceed.</li>
+<li>Add one contact to the account for contact book to be enabled. Now
+contacts can be managed from the Mobile App under the Slide out
+settings menu.</li>
+</ul>
+<hr class="docutils" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="issues-troubleshooting">
+<h1>Issues/Troubleshooting<a class="headerlink" href="#issues-troubleshooting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="issues">
+<h2>Issues<a class="headerlink" href="#issues" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>*For issues, please let us know by heading over to project’s issues
+page on GitHub. If the issue is not reported please help us improve by
+openning a new issue and provide as much detail as possible. IDE logs
+are appreciated.*</strong></div>
+<div class="line"><a class="reference external" href="https://github.com/tonesto7/st-nest-unofficial/issues">Submit Your Issues Here [GitHub Issues
+Page</a>]</div>
+</div>
+</div>
+<div class="section" id="known-issues">
+<h2>Known Issues<a class="headerlink" href="#known-issues" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Device handlers with HTML content won’t reload under Android client.
+This issue is being addressed by ST and an issue has been opened with
+the android developer.</li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">* SmartThings health status shows device offline. Going into the
+device in the SmartThings mobile app, hit settings (gear is upper
+right) and hit done. This should reset the health status.</div>
+</div>
+</div>
+<div class="section" id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line"><strong>Tip:</strong> <em>The most common issue is forgetting to enable oAuth for NST
+Manager SmartApp under SmartThings</em></div>
+<div class="line"><strong>Note:</strong> <em>Do not enable OAuth for the NST Automations Smartapp</em></div>
+<div class="line"><strong>Tip:</strong> <em>The next common issue is not installing in the proper
+SmartThings Shard</em></div>
+<div class="line">If you are experiencing issues start by performing the following:</div>
+</div>
+<ul class="simple">
+<li>Verify the software is the most current SmartApp and Device handler
+code .</li>
+<li>Review installation and configuration instructions for items that may
+not have been followed.</li>
+<li>Take a look at the IDE logs to see any warning or error messages:<ul>
+<li>This is done by going to the “Live Logging” tab in the IDE, and
+leave that window open for a few minutes</li>
+<li>Try to perform actions with the Nest devices in the SmartThings
+Mobile app (NST Manager, or another SmartApp), and look out for
+any warnings and/or error messages.</li>
+</ul>
+</li>
+</ul>
+<div class="line-block">
+<div class="line"><strong>*NOTE:*</strong> If you see 401 status errors in the IDE logs, these are
+authentication issues; revoke and re-enable the Nest Token in the NST
+Manager App.</div>
+</div>
+</div>
+<div class="section" id="faq-frequently-asked-questions">
+<h2>FAQ (Frequently Asked Questions)<a class="headerlink" href="#faq-frequently-asked-questions" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">This section obviously needs some work. Feel free to help make this
+better</div>
+</div>
+</div>
+</div>
+<div class="section" id="feature-requests">
+<h1>Feature Requests<a class="headerlink" href="#feature-requests" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>We love new ideas so please head on over to GitHub and open an issue
+for the feature. This will help prioritize what is important and what
+is not.</li>
+<li>There is a feedback mechanism built into the NST Manager App under
+<em>Help, Info, Instructions and More</em></li>
+</ul>
+<div class="line-block">
+<div class="line">Do read <a class="reference external" href="NST_Manager#Other_Requests">Other Requests</a> section above</div>
+</div>
+</div>
+<div class="section" id="donations">
+<h1>Donations<a class="headerlink" href="#donations" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li>While donations are not required they are very much appreciated.</li>
+<li>Here is donation link <strong>*`donation
+link &lt;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=2CJEVN439EAWS&gt;`__*</strong></li>
+</ul>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">NST Manager App</a><ul>
+<li><a class="reference internal" href="#features-coming-soon">Features (Coming Soon)</a></li>
+<li><a class="reference internal" href="#screen-shots">Screen Shots</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#nst-automations-app">NST Automations App</a><ul>
+<li><a class="reference internal" href="#nest-mode-home-away-automation">Nest Mode (Home/Away Automation)</a></li>
+<li><a class="reference internal" href="#watchdog-automation">WatchDog Automation</a></li>
+<li><a class="reference internal" href="#thermostat-automations">Thermostat Automations</a><ul>
+<li><a class="reference internal" href="#schedules">Schedules</a></li>
+<li><a class="reference internal" href="#fan-automations">Fan Automations</a></li>
+<li><a class="reference internal" href="#remote-sensor">Remote Sensor</a></li>
+<li><a class="reference internal" href="#leak-detection">Leak Detection</a></li>
+<li><a class="reference internal" href="#contact">Contact</a></li>
+<li><a class="reference internal" href="#external-temp">External Temp</a></li>
+<li><a class="reference internal" href="#humidifier-control">Humidifier Control</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#device-handlers">Device Handlers</a><ul>
+<li><a class="reference internal" href="#nest-thermostat">Nest Thermostat</a></li>
+<li><a class="reference internal" href="#nest-protect">Nest Protect</a></li>
+<li><a class="reference internal" href="#nest-camera">Nest Camera</a></li>
+<li><a class="reference internal" href="#nest-weather">Nest Weather</a></li>
+<li><a class="reference internal" href="#nest-presence">Nest Presence</a></li>
+<li><a class="reference internal" href="#nest-virtual-thermostat">Nest Virtual Thermostat</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#project-summary">Project Summary</a><ul>
+<li><a class="reference internal" href="#version-info">Version Info</a></li>
+<li><a class="reference internal" href="#advantages">Advantages</a></li>
+<li><a class="reference internal" href="#latest-announcements">Latest Announcements</a></li>
+<li><a class="reference internal" href="#reference-links">Reference Links</a></li>
+<li><a class="reference internal" href="#things-to-know">Things to Know</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#id3">Device Handlers</a></li>
+<li><a class="reference internal" href="#nest-eco-thermostat-mode">Nest (Eco) Thermostat Mode</a></li>
+<li><a class="reference internal" href="#id4">Nest Protect</a></li>
+<li><a class="reference internal" href="#nest-home-away">Nest Home/Away</a></li>
+<li><a class="reference internal" href="#nest-api-rate-limits">Nest API Rate Limits</a></li>
+<li><a class="reference internal" href="#other-requests">Other Requests</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rd-party-smartapp-compatibility-confirmed">3rd-Party SmartApp Compatibility (Confirmed)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#rd-party-integrations">3rd Party Integrations</a></li>
+<li><a class="reference internal" href="#installation-instructions">Installation Instructions</a><ul>
+<li><a class="reference internal" href="#using-git-integration-recommended">Using Git Integration (Recommended)</a><ul>
+<li><a class="reference internal" href="#installing-the-manager-and-automation-app">Installing The Manager and Automation App</a></li>
+<li><a class="reference internal" href="#installing-the-presence-protect-thermostat-camera-and-weather-device-handlers">Installing the Presence, Protect, Thermostat, Camera, and Weather Device Handlers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-manual-way">The Manual Way</a><ul>
+<li><a class="reference internal" href="#manager-and-automation-app-s-source-code">Manager and Automation App’s Source Code</a></li>
+<li><a class="reference internal" href="#nest-device-installation">Nest Device Installation</a><ul>
+<li><a class="reference internal" href="#device-source-code">Device Source Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#enabling-oauth">Enabling OAuth</a></li>
+<li><a class="reference internal" href="#applying-updates-to-existing-code">Applying Updates to Existing Code</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#getting-nst-manager-installed-and-configured">Getting NST Manager Installed and Configured</a></li>
+<li><a class="reference internal" href="#manager-preferences">Manager Preferences</a><ul>
+<li><a class="reference internal" href="#notification-preferences">Notification Preferences</a><ul>
+<li><a class="reference internal" href="#contact-book">Contact Book</a><ul>
+<li><a class="reference internal" href="#enable-contact-book-option-on-smartthings-account-safe-hack">Enable Contact-Book Option on SmartThings Account (Safe Hack)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#issues-troubleshooting">Issues/Troubleshooting</a><ul>
+<li><a class="reference internal" href="#issues">Issues</a></li>
+<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
+<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
+<li><a class="reference internal" href="#faq-frequently-asked-questions">FAQ (Frequently Asked Questions)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#feature-requests">Feature Requests</a></li>
+<li><a class="reference internal" href="#donations">Donations</a></li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/NST-Manager.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Anthony Santilli.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/NST-Manager.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
