@@ -10,6 +10,7 @@ Welcome to nst-manager-docs's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+nst-manager/index
 
 
 Indices and tables

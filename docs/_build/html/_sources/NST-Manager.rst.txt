@@ -1,4 +1,4 @@
-\ **NST Manager (Formerly: Nest Manager)**\ 
+\ **NST Manager (Formerly: Nest Manager)**\
 
 NST Manager App
 ===============
@@ -38,13 +38,12 @@ Manager, and with each other.
    automations built into Nest itself, as well as SmartThings
    automations.
 
-| 
+|
 
 Nest Mode (Home/Away Automation)
 --------------------------------
 
- **Automate changes to the Nest location's Home
-/ Away setting**
+ **Automate changes to the Nest location's Home/Away setting**
 
 Nest Home/Away can be updated using one of the following:
 
@@ -59,7 +58,7 @@ when HOME.
 Time, ST mode, or HVAC state restrictions can be set to restrict
 operations.
 
-| 
+|
 | For information on SmartThings Location Modes, some references to
   learn about creating, and managing are:
 
@@ -68,14 +67,14 @@ operations.
 -  `How to Add a new Mode [SmartThings Community
    Page <https://community.smartthings.com/t/faq-how-to-add-a-new-mode-or-manually-change-from-one-mode-to-another/15530>`__]
 
-| 
+|
 | See Nest Home/Away Assist in the Nest Mobile App, or in the Nest Web
   interface https://home.nest.com)
 
 ***FYI: Only one instance of a Nest Home/Away automation is allowed per
 SmartThings location***
 
-| 
+|
 
 WatchDog Automation
 -------------------
@@ -86,7 +85,7 @@ Manager for errors (This is automatically installed and configured)**
 -  The sole function of this automation is send notifications when
    errors or safety settings are reached.
 
-| 
+|
 
 Thermostat Automations
 ----------------------
@@ -112,7 +111,7 @@ should be properly set on each thermostats to ensure full protection.***
 (logically a Zone within the home)** Many builtin features may be
 enabled within the Thermostat Automation:
 
-| 
+|
 
 Schedules
 ~~~~~~~~~
@@ -155,7 +154,7 @@ on)*
          -  Motion override settings include HVAC Mode, Temperature
             set-points.
 
-| 
+|
 | A Simple Schedule Example:
 
 -  Schedule 1 \| Heat setpoint: 72� \| SmartThings Location Mode(s):
@@ -164,7 +163,7 @@ on)*
    NIGHTTIME
 -  Schedule 3 \| Heat Setpoint 65�
 
-| 
+|
 | The above assumes ST Location Modes DAYTIME, NIGHTTIME (There may be
   more modes defined), and adjusts the thermostat setpoints when the ST
   Mode changes to one of these modes (schedule 1, schedule 2). Some
@@ -188,7 +187,7 @@ on)*
    above or some other automation or user operation), the schedule would
    be re-evaluated and the temperature settings will take effect.
 
-| 
+|
 | In the example above Schedule 3 is the *"catch-all"* schedule, if none
   of the other schedules matched. So if the ST Mode went from DAYTIME ->
   VACATION, or NIGHTTIME -> VACATION, the first two schedules would not
@@ -199,7 +198,7 @@ on)*
    match, and the schedule would set the zone to 65 degrees when the
    automation runs. ***SCHEDULE ORDER MATTERS!***
 
-| 
+|
 | For more information on SmartThings Location Modes, here are some
   references to learn about creating and managing them:
 
@@ -208,7 +207,7 @@ on)*
 -  `How to Add a new Mode [SmartThings Community
    Page <https://community.smartthings.com/t/faq-how-to-add-a-new-mode-or-manually-change-from-one-mode-to-another/15530>`__]
 
-| 
+|
 | ***NOTE:*** The more advanced schedules will have more parameters
   and/or overrides. Additional settings include motion sensors and
   temperature settings to use if the schedule is active when motion is
@@ -310,7 +309,7 @@ basement**
 
 [Option descriptions/screenshots coming Soon]
 
-| 
+|
 
 Contact
 ~~~~~~~
@@ -329,7 +328,7 @@ system to ECO.
   operations.
 | [Option descriptions/screenshots coming Soon]
 
-| 
+|
 
 External Temp
 ~~~~~~~~~~~~~
@@ -363,7 +362,7 @@ system to ECO.
   operations.
 | [Option descriptions/screenshots coming Soon]
 
-| 
+|
 
 Humidifier Control
 ~~~~~~~~~~~~~~~~~~
@@ -389,7 +388,7 @@ external temperatures**
   operations.
 | [Option descriptions/screenshots coming Soon]
 
-| 
+|
 
 Device Handlers
 ===============
@@ -434,7 +433,7 @@ Device voice reports can be enabled for thermostats, please see
 Integrations info below. `3rd Party
 Integrations <NST_Manager#3rd_Party_Integrations>`__
 
-| 
+|
 
 Nest Protect
 ------------
@@ -462,7 +461,7 @@ Nest Protects interact with Nest thermostats when smoke or CO2 events
 occur. See:
 https://nest.com/support/article/Learn-how-Nest-products-work-together
 
-| 
+|
 
 Nest Camera
 -----------
@@ -481,7 +480,7 @@ SmartThings SmartApps can view / do the following with Nest Cams:
 -  View the last motion event animation
 -  Start and Stop camera streaming
 
-| 
+|
 | *This device handler is compatible with all of SmartThings standard
   `Image
   Capture <http://docs.smartthings.com/en/latest/capabilities-reference.html#image-capture>`__,
@@ -494,7 +493,7 @@ SmartThings SmartApps can view / do the following with Nest Cams:
 -  Note sound and motion sensor reports from nest are delayed by Nest
    until after the event has finished
 
-| 
+|
 
 Nest Weather
 ------------
@@ -509,7 +508,7 @@ Nest Weather
 -  Other applications can use it also, as it is compatible with Smart
    Weather Tile capabilities.
 
-| 
+|
 
 Nest Presence
 -------------
@@ -539,7 +538,7 @@ Nest Virtual Thermostat
    virtual zone that is created by enabling the remote sensor
    automation.
 
-| 
+|
 
 Project Summary
 ===============
@@ -568,7 +567,7 @@ Project Summary
 | @shmookles - Thanks for helping with testing and criticism.   |
 +---------------------------------------------------------------+
 
-| 
+|
 
 Version Info
 ------------
@@ -595,7 +594,7 @@ Version Info
 | Camera         | *v5.1.0*       |
 +----------------+----------------+
 
-| 
+|
 
 Advantages
 ----------
@@ -619,7 +618,7 @@ Advantages
    with SmartThings Device Capabilities
 -  The devices look great :smile:
 
-| 
+|
 
 Latest Announcements
 --------------------
@@ -647,7 +646,7 @@ features:**
 -  `V4.5.1 Update
    Announcement <https://community.smartthings.com/t/release-nest-manager-4-0/60052/691>`__
 
-| 
+|
 
 Reference Links
 ---------------
@@ -659,7 +658,7 @@ Reference Links
 -  `SmartThings IDE GitHub Integration
    Instructions <http://docs.smartthings.com/en/latest/tools-and-ide/github-integration.html>`__
 
-| 
+|
 
 Things to Know
 --------------
@@ -853,7 +852,7 @@ Other Requests
       schedule; Nest does not offer a resume command for temperature
       overrides, beyond the next "schedule change time"
 
-| 
+|
 
 3rd-Party SmartApp Compatibility (Confirmed)
 --------------------------------------------
@@ -875,15 +874,15 @@ weather capabilities.
 | `Keenect <https://community.smartthings.com/t/release-keenect-v1-2-0-optional-separate-vo-settings-for-cooling-vent-obstruction-auto-clear/39119>`__   | @Mike\_Maxwell   |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+
 
-| 
+|
 
 3rd Party Integrations
 ======================
 
-| 
+|
 | \* **`Ask Alexa <Ask_Alexa>`__** by (Michael Struck)
 
-| 
+|
 
 Installation Instructions
 =========================
@@ -907,7 +906,7 @@ below are the current shards:*
 -  US: https://graph.smartthings.com or https://ide.smartthings.com
 -  Europe: https://graph-eu01-euwest1.api.smartthings.com
 
-| 
+|
 
 Using Git Integration (Recommended)
 -----------------------------------
@@ -923,7 +922,7 @@ Instructions <http://docs.smartthings.com/en/latest/tools-and-ide/github-integra
 **NOTE: Git Integration is not currently available outside of US and
 UK**
 
-| 
+|
 
 Installing The Manager and Automation App
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -981,12 +980,12 @@ That's it in the IDE... Just install "**NST Manager**" from the
 When updates are available to the source code the Link color change from
 black in the IDE.
 
-| 
+|
 
 The Manual Way
 --------------
 
-| 
+|
 | === NST Manager and NST Automations Code Installation ===
 
 The code for the SmartThings SmartApp is found on the GitHub site:
@@ -1092,7 +1091,7 @@ Device Source Code
 | Nest Cam:          | *https://github.com/tonesto7/nest-manager/blob/master/devicetypes/tonesto7/nest-camera.src/nest-camera.groovy*           |
 +--------------------+--------------------------------------------------------------------------------------------------------------------------+
 
-| 
+|
 
 Enabling OAuth
 --------------
@@ -1260,7 +1259,7 @@ cause any harm.
 
 --------------
 
-| 
+|
 
 Issues/Troubleshooting
 ======================
@@ -1282,7 +1281,7 @@ Known Issues
    This issue is being addressed by ST and an issue has been opened with
    the android developer.
 
-| 
+|
 | \* SmartThings health status shows device offline. Going into the
   device in the SmartThings mobile app, hit settings (gear is upper
   right) and hit done. This should reset the health status.
@@ -1338,5 +1337,4 @@ Donations
    link <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2CJEVN439EAWS>`__***
 
 
-| 
-
+|
