@@ -1,5 +1,7 @@
 
 
+
+
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
@@ -8,10 +10,12 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>NST Manager App &mdash; nst-manager-docs 1.0 documentation</title>
+  <title>NST Manager App &mdash; SmartThings Developer Documentation</title>
   
 
   
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
   
   
   
@@ -30,12 +34,16 @@
   
 
   
+    <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+  
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  
 
   
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="nst-manager-docs 1.0 documentation" href="index.html"/> 
+    <link rel="top" title="SmartThings Developer Documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -64,7 +72,7 @@
             
             
               <div class="version">
-                1.0
+                latest
               </div>
             
           
@@ -88,96 +96,44 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">NST Manager App</a><ul>
-<li><a class="reference internal" href="#features-coming-soon">Features (Coming Soon)</a></li>
-<li><a class="reference internal" href="#screen-shots">Screen Shots</a></li>
+              <p class="caption"><span class="caption-text">What's New</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="latest-updates.html">Latest Updates</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#nst-automations-app">NST Automations App</a><ul>
-<li><a class="reference internal" href="#nest-mode-home-away-automation">Nest Mode (Home/Away Automation)</a></li>
-<li><a class="reference internal" href="#watchdog-automation">WatchDog Automation</a></li>
-<li><a class="reference internal" href="#thermostat-automations">Thermostat Automations</a><ul>
-<li><a class="reference internal" href="#schedules">Schedules</a></li>
-<li><a class="reference internal" href="#fan-automations">Fan Automations</a></li>
-<li><a class="reference internal" href="#remote-sensor">Remote Sensor</a></li>
-<li><a class="reference internal" href="#leak-detection">Leak Detection</a></li>
-<li><a class="reference internal" href="#contact">Contact</a></li>
-<li><a class="reference internal" href="#external-temp">External Temp</a></li>
-<li><a class="reference internal" href="#humidifier-control">Humidifier Control</a></li>
+<p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/up-and-running.html">Up and Running</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/groovy-basics.html">Groovy Basics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/groovy-for-smartthings.html">Groovy With SmartThings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/first-smartapp.html">Writing Your First SmartApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/getting-help.html">Getting Help</a></li>
 </ul>
-</li>
+<p class="caption"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="architecture/index.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools-and-ide/index.html">Tools and IDE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smartapp-developers-guide/index.html">SmartApps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smartapp-web-services-developers-guide/index.html">Web Services SmartApps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="device-type-developers-guide/index.html">Device Handlers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cloud-and-lan-connected-device-types-developers-guide/index.html">Cloud- and LAN-connected Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="composite-devices/index.html">Composite Devices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arduino/index.html">Arduino ThingShield</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ratelimits/index.html">Rate Limits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="publishing/index.html">Publishing Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code-review-guidelines.html">Code Review Guidelines and Best Practices</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#device-handlers">Device Handlers</a><ul>
-<li><a class="reference internal" href="#nest-thermostat">Nest Thermostat</a></li>
-<li><a class="reference internal" href="#nest-protect">Nest Protect</a></li>
-<li><a class="reference internal" href="#nest-camera">Nest Camera</a></li>
-<li><a class="reference internal" href="#nest-weather">Nest Weather</a></li>
-<li><a class="reference internal" href="#nest-presence">Nest Presence</a></li>
-<li><a class="reference internal" href="#nest-virtual-thermostat">Nest Virtual Thermostat</a></li>
+<p class="caption"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="capabilities-reference.html">Capabilities Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref-docs/reference.html">API Documentation</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#project-summary">Project Summary</a><ul>
-<li><a class="reference internal" href="#version-info">Version Info</a></li>
-<li><a class="reference internal" href="#advantages">Advantages</a></li>
-<li><a class="reference internal" href="#latest-announcements">Latest Announcements</a></li>
-<li><a class="reference internal" href="#reference-links">Reference Links</a></li>
-<li><a class="reference internal" href="#things-to-know">Things to Know</a><ul>
-<li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#id1">Device Handlers</a></li>
-<li><a class="reference internal" href="#nest-eco-thermostat-mode">Nest (Eco) Thermostat Mode</a></li>
-<li><a class="reference internal" href="#id2">Nest Protect</a></li>
-<li><a class="reference internal" href="#nest-home-away">Nest Home/Away</a></li>
-<li><a class="reference internal" href="#nest-api-rate-limits">Nest API Rate Limits</a></li>
-<li><a class="reference internal" href="#other-requests">Other Requests</a></li>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing to the Docs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sept-2015-faq.html">Samsung SmartThings Hub FAQ</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#rd-party-smartapp-compatibility-confirmed">3rd-Party SmartApp Compatibility (Confirmed)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#rd-party-integrations">3rd Party Integrations</a></li>
-<li><a class="reference internal" href="#installation-instructions">Installation Instructions</a><ul>
-<li><a class="reference internal" href="#using-git-integration-recommended">Using Git Integration (Recommended)</a><ul>
-<li><a class="reference internal" href="#installing-the-manager-and-automation-app">Installing The Manager and Automation App</a></li>
-<li><a class="reference internal" href="#installing-the-presence-protect-thermostat-camera-and-weather-device-handlers">Installing the Presence, Protect, Thermostat, Camera, and Weather Device Handlers</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#the-manual-way">The Manual Way</a><ul>
-<li><a class="reference internal" href="#manager-and-automation-app-s-source-code">Manager and Automation App’s Source Code</a></li>
-<li><a class="reference internal" href="#nest-device-installation">Nest Device Installation</a><ul>
-<li><a class="reference internal" href="#device-source-code">Device Source Code</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#enabling-oauth">Enabling OAuth</a></li>
-<li><a class="reference internal" href="#applying-updates-to-existing-code">Applying Updates to Existing Code</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#getting-nst-manager-installed-and-configured">Getting NST Manager Installed and Configured</a></li>
-<li><a class="reference internal" href="#manager-preferences">Manager Preferences</a><ul>
-<li><a class="reference internal" href="#notification-preferences">Notification Preferences</a><ul>
-<li><a class="reference internal" href="#contact-book">Contact Book</a><ul>
-<li><a class="reference internal" href="#enable-contact-book-option-on-smartthings-account-safe-hack">Enable Contact-Book Option on SmartThings Account (Safe Hack)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#issues-troubleshooting">Issues/Troubleshooting</a><ul>
-<li><a class="reference internal" href="#issues">Issues</a></li>
-<li><a class="reference internal" href="#known-issues">Known Issues</a></li>
-<li><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
-<li><a class="reference internal" href="#faq-frequently-asked-questions">FAQ (Frequently Asked Questions)</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#feature-requests">Feature Requests</a></li>
-<li><a class="reference internal" href="#donations">Donations</a></li>
-</ul>
-</div>
+
             
           
         </div>
@@ -1708,7 +1664,7 @@ link &lt;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_i
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'1.0',
+            VERSION:'latest',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -1718,6 +1674,8 @@ link &lt;https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_i
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/javascript/clipboard.min.js"></script>
+      <script type="text/javascript" src="_static/javascript/copycode.js"></script>
 
   
 
