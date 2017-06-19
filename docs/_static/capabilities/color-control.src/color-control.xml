@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capability name='Color Control' public='true'>
+	<attribute name='color' type='STRING' />
+	<attribute name='hue' type='NUMBER' />
+	<attribute name='saturation' type='NUMBER' />
+	<command name='setColor'>
+		<argument name='color' type='COLOR_MAP'>
+			<component name='hue' type='NUMBER'/>
+			<component name='saturation' type='NUMBER'/>
+		</argument>
+	</command>
+	<command name='setHue'>
+		<argument name='hue' type='NUMBER' />
+	</command>
+	<command name='setSaturation'>
+		<argument name='saturation' type='NUMBER' />
+	</command>
+</capability>

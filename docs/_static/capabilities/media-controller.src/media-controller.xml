@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<capability name='Media Controller' public='true'>
+	<attribute name='activities' type='JSON_OBJECT' />
+	<attribute name='currentActivity' type='STRING' />
+	<command name='startActivity'>
+		<argument name='activityId' type='STRING' />
+	</command>
+</capability>

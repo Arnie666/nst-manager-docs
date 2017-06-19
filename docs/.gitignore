@@ -1,0 +1,10 @@
+*.iws
+*.tmproj
+*.iml
+.idea
+.DS_Store
+_build
+_static/capabilities.zip
+.firebaserc
+database.rules.json
+firebase.json
